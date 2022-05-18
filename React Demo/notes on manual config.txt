@@ -1,0 +1,70 @@
+1. CRA - cli
+2. without cli
+
+
+1.npm init
+
+2.install react react-dom
+
+
+3.npm install -D @babel/cli @babel/core @babel/plugin-transform-runtime @babel/preset-env @babel/preset-react @babel/runtime babel-eslint babel-loader webpack webpack-cli webpack-dev-server
+
+4. webpack.config.js
+const path = require("path");
+
+module.exports = {
+  mode: "development",
+  entry: "./index.js",
+  output: {
+    path: path.resolve(__dirname, "public"),
+    filename: "main.js",
+  },
+
+  target: "web",
+  devServer: {
+    port: "3000",
+    static: ["./public"],
+    open: true,
+    hot: true,
+    liveReload: true,
+  },
+  resolve: {
+    extensions: [".js", ".jsx", ".json", ".ts"],
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: "babel-loader",
+      },
+    ],
+  },
+};
+
+
+
+5.  .babelrc
+{
+    "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
+
+
+6.public -> index.html -> create a root -> script src="webpackfilename.js"
+
+
+7.src ->index.js -> create a react app
+
+8. package.json -> entry point
+
+
+change these properties
+
+"main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server ."
+  }
+
+
+9.npm start
