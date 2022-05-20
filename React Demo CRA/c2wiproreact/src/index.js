@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Counter from './components/CounterComponent';
 import App from './App';
+import TodoComponent from './components/TodoComponent';
 const data=[
   {
     fname:"peter",
@@ -21,8 +22,10 @@ const data=[
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
+<div>
+<TodoComponent></TodoComponent>
 
- <App studentdata={data}></App>
+</div>
 
 );
 
