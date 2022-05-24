@@ -1,56 +1,22 @@
-import { useState } from "react"
-import TextField from "@mui/material/TextField"
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-function App(props){
- /*const [role,setRole]=useState("admin")
-  const updateRole=(e)=>{
-    e.preventDefault()
-    setRole("trainee")
-  }
-  return(
-    <>
-    {console.log(role)}
-    <h1>Hello {props.prop1}</h1>
-    <h2>{role}</h2>
-    <button onClick={updateRole}>update</button>
-    </>
-  )*/
+import ProductCatalog from "./components/ProductCatalog"
+const data=[{
+  itemPrice:"10000",
+  itemLink:"https://www.amazon.in/dp/B087JYBBSR/ref=s9_acsd_al_bw_c2_x_0_i?pf_rd_m=A1K21FY43GMZF8&pf_rd_s=merchandised-search-5&pf_rd_r=TTG6G54Z6XV87V7ST17Z&pf_rd_t=101&pf_rd_p=6e70ba05-ce3b-4e81-9c9d-651b9c33f4cd&pf_rd_i=26190167031",
+  itemImage:"https://m.media-amazon.com/images/I/71sFjIGl9UL._SX355_.jpg",
+  itemTitle:"AmazonBasics 127 cm (50 inches) 4K Ultra HD Smart LED Fire TV AB50U20PS (Black)"
+},
+{
+  itemPrice:"10000",
+  itemLink:"https://www.amazon.in/dp/B087JYBBSR/ref=s9_acsd_al_bw_c2_x_0_i?pf_rd_m=A1K21FY43GMZF8&pf_rd_s=merchandised-search-5&pf_rd_r=TTG6G54Z6XV87V7ST17Z&pf_rd_t=101&pf_rd_p=6e70ba05-ce3b-4e81-9c9d-651b9c33f4cd&pf_rd_i=26190167031",
+  itemImage:"https://m.media-amazon.com/images/I/71sFjIGl9UL._SX355_.jpg",
+  itemTitle:"AmazonBasics 127 cm (50 inches) 4K Ultra HD Smart LED Fire TV AB50U20PS (Black)"
+}
+]
+
+function App(){
   return(
     <div>
-<TextField id="filled-basic" label="Filled" variant="filled" />
-<Card sx={{ minWidth: 275 }}>
-      <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          Word of the Day
-        </Typography>
-        <Typography variant="h5" component="div">
-          some content
-        </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          adjective
-        </Typography>
-        <Typography variant="body2">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-   { props.studentdata.map((item)=>
-    (
-      <div>
-        <h2>{item.fname}</h2>
-        <h3>{item.email}</h3>
-      </div>
-     
-    ))}
+     <ProductCatalog data={data}></ProductCatalog>
     </div>
   )
 }
