@@ -8,7 +8,6 @@ const FunctionalComponent=()=>{
     const addItem=()=>{
         setId(id+1)
        setTodoData([...todoData,{id:id,todoTitle:todoTitle}])
-
     }
     return(
         <div>
