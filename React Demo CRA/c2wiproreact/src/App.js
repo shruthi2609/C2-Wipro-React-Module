@@ -1,22 +1,24 @@
 import ProductCatalog from "./components/ProductCatalog"
-const data=[{
-  itemPrice:"10000",
-  itemLink:"https://www.amazon.in/dp/B087JYBBSR/ref=s9_acsd_al_bw_c2_x_0_i?pf_rd_m=A1K21FY43GMZF8&pf_rd_s=merchandised-search-5&pf_rd_r=TTG6G54Z6XV87V7ST17Z&pf_rd_t=101&pf_rd_p=6e70ba05-ce3b-4e81-9c9d-651b9c33f4cd&pf_rd_i=26190167031",
-  itemImage:"https://m.media-amazon.com/images/I/71sFjIGl9UL._SX355_.jpg",
-  itemTitle:"AmazonBasics 127 cm (50 inches) 4K Ultra HD Smart LED Fire TV AB50U20PS (Black)"
-},
-{
-  itemPrice:"10000",
-  itemLink:"https://www.amazon.in/dp/B087JYBBSR/ref=s9_acsd_al_bw_c2_x_0_i?pf_rd_m=A1K21FY43GMZF8&pf_rd_s=merchandised-search-5&pf_rd_r=TTG6G54Z6XV87V7ST17Z&pf_rd_t=101&pf_rd_p=6e70ba05-ce3b-4e81-9c9d-651b9c33f4cd&pf_rd_i=26190167031",
-  itemImage:"https://m.media-amazon.com/images/I/71sFjIGl9UL._SX355_.jpg",
-  itemTitle:"AmazonBasics 127 cm (50 inches) 4K Ultra HD Smart LED Fire TV AB50U20PS (Black)"
-}
-]
-
+import SignUpComponent from "./components/SPA Components/SignUpComponent"
+import {BrowserRouter,Link,Routes,Route} from "react-router-dom"
+import HomePage from "./components/SPA Components/HomePage"
+import {DashBoard} from "./components/SPA Components/DashBoard"
+import SearchComponent from "./components/SPA Components/SearchComponent"
 function App(){
   return(
     <div>
-     <ProductCatalog data={data}></ProductCatalog>
+   <BrowserRouter>
+   
+ { /* <Link to="/dashboard">DashBoard</Link>*/}
+   <Routes>
+     <Route path="/" element={<HomePage></HomePage>}></Route>
+     <Route path="/signup" element={<SignUpComponent></SignUpComponent>}></Route>
+     <Route path="/dashboard/:username/:email/:country" element={<DashBoard></DashBoard>}></Route>
+     <Route path="/search" element={<SearchComponent></SearchComponent>}></Route>
+
+   </Routes>
+
+   </BrowserRouter>
     </div>
   )
 }
