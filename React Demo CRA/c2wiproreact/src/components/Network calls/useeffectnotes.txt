@@ -1,0 +1,22 @@
+useEffect:
+
+ 
+1. called after ALL the render
+
+useEffect(()=>{
+        console.log("inside useeffect")
+    })
+
+
+2. executed oly once after initial render , 
+wont be executed for re renders
+useEffect(()=>{
+        console.log("inside useeffect")
+    },[])
+
+
+3.executed every time after the dependency changes , 
+wont be executed for re renders
+useEffect(()=>{
+        console.log("inside useeffect")
+    },[somedep(can be state or props)])

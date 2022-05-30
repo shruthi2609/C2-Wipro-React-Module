@@ -1,18 +1,17 @@
 import React from "react"
-import axios from "axios"
+
 class ClassLifeCyle extends React.Component{
     constructor(props){
         super(props)
         this.state={
             serverData:[]
-            
         }
     }
     componentDidMount(){
       /*  setTimeout(()=>{
             fetch("https://jsonplaceholder.typicode.com/users").then((res)=>{return res.json()}).then((res)=>this.setState({serverData:res})).catch((err)=>console.log(err))
-          },3000)*/
-          axios.get("https://jsonplaceholder.typicode.com/users").then((res)=>console.log(res.data)).catch((err)=>console.log(err))
+          },3000)
+          axios.get("https://jsonplaceholder.typicode.com/users").then((res)=>console.log(res.data)).catch((err)=>console.log(err))*/
     }
   /*  callAPI=()=>{
         fetch("https://jsonplaceholder.typicode.com/users").then((res)=>{return res.json()}).then((res)=>this.setState({serverData:res})).catch((err)=>console.log(err))
