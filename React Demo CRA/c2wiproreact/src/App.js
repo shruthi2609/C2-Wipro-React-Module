@@ -10,6 +10,7 @@ import { DashBoardComponent } from "./components/handlingsessions/DashBoard"*/
 import ViewContact from "./components/Contact Manager/ViewContacts"
 import {BrowserRouter,Link,Routes,Route} from "react-router-dom"
 import AddContact from "./components/Contact Manager/AddContact"
+import DeleteContact from "./components/Contact Manager/DeleteContact"
 function App(){
   return(
     <div>
@@ -17,6 +18,7 @@ function App(){
    <Routes>
      <Route path="/" element={<ViewContact></ViewContact>}></Route>
      <Route path="/create" element={<AddContact></AddContact>}></Route>
+     <Route path="/delete/:userid" element={<DeleteContact></DeleteContact>}></Route>
    </Routes>
 
    </BrowserRouter>
