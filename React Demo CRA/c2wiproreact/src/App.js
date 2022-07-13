@@ -11,14 +11,16 @@ import ViewContact from "./components/Contact Manager/ViewContacts"
 import {BrowserRouter,Link,Routes,Route} from "react-router-dom"
 import AddContact from "./components/Contact Manager/AddContact"
 import DeleteContact from "./components/Contact Manager/DeleteContact"
+import SignInComponent from "./components/IntegrationAuthentication/SignInComponent"
+import DashBoard from "./components/IntegrationAuthentication/DashBoard"
 function App(){
   return(
     <div>
    <BrowserRouter>
    <Routes>
-     <Route path="/" element={<ViewContact></ViewContact>}></Route>
-     <Route path="/create" element={<AddContact></AddContact>}></Route>
-     <Route path="/delete/:userid" element={<DeleteContact></DeleteContact>}></Route>
+     <Route path="/" element={<SignInComponent></SignInComponent>}></Route>
+     <Route path="/dashboard/:email" element={<DashBoard></DashBoard>}></Route>
+     
    </Routes>
 
    </BrowserRouter>
