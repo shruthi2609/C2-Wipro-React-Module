@@ -28,7 +28,6 @@ const SignInComponent=()=>{
         catch(err){
             console.log(err)
         }
-
     }
     const handleNavigate=()=>{
         navigate(`/dashboard/${email}`)

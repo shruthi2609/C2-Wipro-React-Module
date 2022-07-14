@@ -13,6 +13,7 @@ import AddContact from "./components/Contact Manager/AddContact"
 import DeleteContact from "./components/Contact Manager/DeleteContact"
 import SignInComponent from "./components/IntegrationAuthentication/SignInComponent"
 import DashBoard from "./components/IntegrationAuthentication/DashBoard"
+import UpdatePassword from "./components/IntegrationAuthentication/UpdatePassword"
 function App(){
   return(
     <div>
@@ -20,6 +21,7 @@ function App(){
    <Routes>
      <Route path="/" element={<SignInComponent></SignInComponent>}></Route>
      <Route path="/dashboard/:email" element={<DashBoard></DashBoard>}></Route>
+     <Route path="/updatepassword" element={<UpdatePassword></UpdatePassword>}></Route>
      
    </Routes>
 
