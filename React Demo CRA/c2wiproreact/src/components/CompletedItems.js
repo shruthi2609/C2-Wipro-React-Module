@@ -1,5 +1,5 @@
  const CompeletedItems=(props)=>{
-    console.log("this is props",props.deleteFun)
+    /*console.log("this is props",props.deleteFun)*/
     const styleobj={
         backgroundColor:"aqua"
     }
@@ -11,7 +11,7 @@
                     return item.completed&&<div>
                         <h3>{item.title}</h3>
                         <p>{item.text}</p>
-                        <button onClick={()=>props.deleteFun(item.id)}>delete</button>
+                    <button onClick={()=>props.deleteFun(item.id)}>delete</button>
                         </div>
                 })
             }
